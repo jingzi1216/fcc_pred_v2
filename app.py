@@ -30,11 +30,11 @@ TARGET_RANGES = {
 }
 
 st.set_page_config(
-    page_title="模型预测与最优值计算",
+    page_title="催化裂化装置产品及碳排放多目标预测模型",
     layout='wide'
 )
 
-st.title("催化裂化装置预测与最优值计算")
+st.title("催化裂化装置产品及碳排放多目标预测模型")
 st.markdown("---")
 
 # 上传Excel文件
@@ -106,9 +106,9 @@ if uploaded_file:
         best_val = value / (co2 + 1e-8)
 
         # 合并指标到结果
-        result_df['计算价值'] = value
+        result_df['产品价值'] = value
         result_df['CO2排放t/h'] = co2
-        result_df['最优值'] = best_val
+        result_df['产品价值/CO2排放量'] = best_val
 
         # 展示结果
         st.subheader("预测结果与最优值")
